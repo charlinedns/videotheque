@@ -1,0 +1,30 @@
+#card{
+    display: flex;
+}
+#formulaires{
+    width: 60%;
+    margin:10px auto ;
+    border: 1px solid grey;
+    display: flex;
+    padding: 5px;
+}
+#inscription h1 {
+    color: red;
+    font-size: 1.8em;
+}
+#inscription{
+    width: 50%;
+    border-right: 2px solid gray;
+}
+input{
+    display: block;
+    width: 300px;
+    margin: 10px;
+}
+#inscription form button{
+    width: 200px;
+}
+.connexion h1{
+    color: red;
+    font-size: 1.8em;
+}
