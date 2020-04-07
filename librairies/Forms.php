@@ -76,8 +76,8 @@ class Forms
             }
             if ($erreur === '') {
                 Model::insert(
-                    'pseudo,email,password,avatar,reg_date',
                     'users',
+                    'pseudo,email,password,avatar,reg_date',
                     '?,?,?,?,?',
                     [$dataReg['pseudo'], $dataReg['email'], hash('sha256', $dataReg['password1']), $urlAvatar, date('Y-m-d')]
                 );
