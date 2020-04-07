@@ -1,6 +1,11 @@
 <?php
 class Footer{
     public static function displayFooter(){
-         echo "<div>Je suis un footer </div>";
+        
+        $dossier = opendir(__DIR__);
+         while ($fichier = readdir($dossier)){
+            echo $fichier;
+            echo "<br>";
+        }
     }
 }

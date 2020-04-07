@@ -15,6 +15,7 @@ require_once "librairies/autoload.php";
     <link rel="stylesheet" href="style.css">
     <!--https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css-->
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-oOs/gFavzADqv3i5nCM+9CzXe3e5vXLXZ5LZ7PplpsWpTCufB7kqkTlC9FtZ5nJo" crossorigin="anonymous">
+    <script src="assets/js/main.js"></script>
     
 </head>
 
@@ -65,6 +66,7 @@ require_once "librairies/autoload.php";
 
 <?php 
    Footer::displayFooter();
+   include "templates/footer.html.php";
     ?>
 
 </body>

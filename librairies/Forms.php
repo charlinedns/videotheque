@@ -27,6 +27,7 @@ class Forms
                 $result = $rq->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['pseudo'] = $result['pseudo'];
                 $_SESSION['avatar'] = $result['avatar'];
+                $_SESSION['role']=$result['role'];
                 header("Location: index.php");
             } else {
                 $erreur .= "<div>Une erreur s'est produite lors de la saisie 2.</div>";
@@ -97,7 +98,7 @@ class Forms
         while ($result =$rq->fetch(PDO::FETCH_ASSOC)){
             $genresTmp=array_map('trim',explode(',',$result['genres']));
             $listeGenres=array_merge($genresTmp,$listeGenres);
-            array_push($result['year'],$listeYear);//
+            array_push($listeYear,$result['year']);//
             //var_dump($listeGenres);
        } 
         //Fusionner les tableaux pour ne garder plus qu'un exemplaire de chaque entrée

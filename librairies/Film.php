@@ -40,4 +40,12 @@ class Film
                         </div>";
         }
     }
+
+    public static function autoFilm($searchFilm){
+        $searchFilm = "%".$searchFilm."%";
+        $rq = Model::select('title, id_movie','movies_full','','','WHERE title LIKE ?', [$searchFilm]);
+        while ($result = $rq->fetch(PDO::FETCH_ASSOC)){
+            echo "<div class='fixed'><a href='movie.php?id=".$result['id_movie']."'>".$result['title']."</a></div>";
+        }
+    }
 }

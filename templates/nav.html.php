@@ -33,10 +33,19 @@
         <a class='nav-link' href='connect.php'>Connectez-vous</a>
       </li>
       <?php endif; ?>
+      <!--Gestion administration-->
+       <?php if(isset($_SESSION['role'])) : ?>
+          <?php if($_SESSION['role'] === 'admin') : ?>
+            <li class='nav-item'>
+              <a class='nav-link' href='admin.php'>Administration</a>
+            </li>   
+          <?php endif; ?>  
+        <?php endif; ?>
+
     </ul>
     <form class='form-inline my-2 my-lg-0'>
-      <input class='form-control mr-sm-2' type='text' placeholder='Search'>
-      <button class='btn btn-secondary my-2 my-sm-0' type='submit'>Search</button>
+      <input class='form-control mr-sm-2' type='text' id="searchFilm" placeholder='Recherche'>
+      <div id="renderTitle"></div>
     </form>
   </div>
 </nav>

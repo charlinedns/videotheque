@@ -21,8 +21,8 @@ $shortFilm= Film::displayShortFilm($limite, $count);
 
 <?php
 
-$filmDetails = Film::displayFilm($id);
-foreach ($filmDetails as $value) {
+//$filmDetails = Film::displayFilm($id);
+//foreach ($filmDetails as $value) {
 
 ?>
     <div class='card border-primary mb-3' style='max-width: 20rem;'>
@@ -33,4 +33,4 @@ foreach ($filmDetails as $value) {
             <p class='card-text'><?= $value['plot'] ?></p>
         </div>
     </div>
-<?php } ?>
+<?php //} ?>
